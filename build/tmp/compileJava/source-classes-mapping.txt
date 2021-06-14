@@ -1,9 +1,9 @@
 ru/vokazak/ExchangeRatesComparator/pojo/Images.java
  ru.vokazak.ExchangeRatesComparator.pojo.Images
+ru/vokazak/ExchangeRatesComparator/pojo/GifReply.java
+ ru.vokazak.ExchangeRatesComparator.pojo.GifReply
 ru/vokazak/ExchangeRatesComparator/exceptions/ExchangeRatesComparatorAdvice.java
  ru.vokazak.ExchangeRatesComparator.exceptions.ExchangeRatesComparatorAdvice
-ru/vokazak/ExchangeRatesComparator/ExchangeRatesComparatorApplication.java
- ru.vokazak.ExchangeRatesComparator.ExchangeRatesComparatorApplication
 ru/vokazak/ExchangeRatesComparator/service/CurrencyAnalyzer.java
  ru.vokazak.ExchangeRatesComparator.service.CurrencyAnalyzer
 ru/vokazak/ExchangeRatesComparator/service/CurrencyComparator.java
@@ -26,7 +26,7 @@ ru/vokazak/ExchangeRatesComparator/client/GiphyClient.java
  ru.vokazak.ExchangeRatesComparator.client.GiphyClient
 ru/vokazak/ExchangeRatesComparator/config/Configuration.java
  ru.vokazak.ExchangeRatesComparator.config.Configuration
-ru/vokazak/ExchangeRatesComparator/pojo/GifReply.java
- ru.vokazak.ExchangeRatesComparator.pojo.GifReply
+ru/vokazak/ExchangeRatesComparator/ExchangeRatesComparatorApplication.java
+ ru.vokazak.ExchangeRatesComparator.ExchangeRatesComparatorApplication
 ru/vokazak/ExchangeRatesComparator/controllers/CurrencyController.java
  ru.vokazak.ExchangeRatesComparator.controllers.CurrencyController

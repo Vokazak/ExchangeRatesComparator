@@ -35,7 +35,7 @@ public class CurrencyController {
             }
 
         } catch (ExchangeRatesComparatorException e) {
-            throw new ExchangeRatesComparatorException("Exception while getting gif by currency state");
+            throw new ExchangeRatesComparatorException("Exception while getting gif by currency state", e);
         }
     }
 }
