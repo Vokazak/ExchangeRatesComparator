@@ -3,6 +3,7 @@ package ru.vokazak.ExchangeRatesComparator.service;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.vokazak.ExchangeRatesComparator.client.ExchangeRateClient;
@@ -19,6 +20,7 @@ import java.util.Date;
 public class CurrencyAnalyzer {
 
     @Value("${openExchangeRates.id}")
+    @Setter
     private String appId;
 
     private final ExchangeRateClient client;

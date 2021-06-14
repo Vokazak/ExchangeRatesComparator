@@ -1,7 +1,6 @@
 .idea
-*.iws
-*.iml
-*.ipr
+build
+.gradle
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/

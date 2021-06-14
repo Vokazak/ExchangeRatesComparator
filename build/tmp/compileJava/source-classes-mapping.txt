@@ -4,10 +4,10 @@ ru/vokazak/ExchangeRatesComparator/pojo/GifReply.java
  ru.vokazak.ExchangeRatesComparator.pojo.GifReply
 ru/vokazak/ExchangeRatesComparator/exceptions/ExchangeRatesComparatorAdvice.java
  ru.vokazak.ExchangeRatesComparator.exceptions.ExchangeRatesComparatorAdvice
-ru/vokazak/ExchangeRatesComparator/service/CurrencyAnalyzer.java
- ru.vokazak.ExchangeRatesComparator.service.CurrencyAnalyzer
-ru/vokazak/ExchangeRatesComparator/service/CurrencyComparator.java
- ru.vokazak.ExchangeRatesComparator.service.CurrencyComparator
+ru/vokazak/ExchangeRatesComparator/config/Configuration.java
+ ru.vokazak.ExchangeRatesComparator.config.Configuration
+ru/vokazak/ExchangeRatesComparator/ExchangeRatesComparatorApplication.java
+ ru.vokazak.ExchangeRatesComparator.ExchangeRatesComparatorApplication
 ru/vokazak/ExchangeRatesComparator/pojo/User.java
  ru.vokazak.ExchangeRatesComparator.pojo.User
 ru/vokazak/ExchangeRatesComparator/client/ExchangeRateClient.java
@@ -20,13 +20,13 @@ ru/vokazak/ExchangeRatesComparator/exceptions/ExchangeRatesComparatorException.j
  ru.vokazak.ExchangeRatesComparator.exceptions.ExchangeRatesComparatorException
 ru/vokazak/ExchangeRatesComparator/pojo/GifObject.java
  ru.vokazak.ExchangeRatesComparator.pojo.GifObject
-ru/vokazak/ExchangeRatesComparator/service/GifFinder.java
- ru.vokazak.ExchangeRatesComparator.service.GifFinder
+ru/vokazak/ExchangeRatesComparator/service/CurrencyComparator.java
+ ru.vokazak.ExchangeRatesComparator.service.CurrencyComparator
 ru/vokazak/ExchangeRatesComparator/client/GiphyClient.java
  ru.vokazak.ExchangeRatesComparator.client.GiphyClient
-ru/vokazak/ExchangeRatesComparator/config/Configuration.java
- ru.vokazak.ExchangeRatesComparator.config.Configuration
-ru/vokazak/ExchangeRatesComparator/ExchangeRatesComparatorApplication.java
- ru.vokazak.ExchangeRatesComparator.ExchangeRatesComparatorApplication
+ru/vokazak/ExchangeRatesComparator/service/CurrencyAnalyzer.java
+ ru.vokazak.ExchangeRatesComparator.service.CurrencyAnalyzer
+ru/vokazak/ExchangeRatesComparator/service/GifFinder.java
+ ru.vokazak.ExchangeRatesComparator.service.GifFinder
 ru/vokazak/ExchangeRatesComparator/controllers/CurrencyController.java
  ru.vokazak.ExchangeRatesComparator.controllers.CurrencyController
