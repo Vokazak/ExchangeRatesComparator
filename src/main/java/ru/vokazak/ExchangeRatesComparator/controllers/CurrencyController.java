@@ -2,7 +2,7 @@ package ru.vokazak.ExchangeRatesComparator.controllers;
 
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,31 +13,26 @@ import ru.vokazak.ExchangeRatesComparator.pojo.GifObject;
 
 @RestController
 @RequiredArgsConstructor
+@ConfigurationProperties(prefix = "keyword")
 public class CurrencyController {
 
     private final CurrencyComparator currencyComparator;
     private final GifFinder gifFinder;
 
-    @Value("${keyword.currencyGrows}")
     @Setter
-    private String currencyGrowsKeyword;
-    @Value("${keyword.currencyFalls}")
+    private String currencyGrows;
     @Setter
-    private String currencyFallsKeyword;
+    private String currencyFalls;
 
     @GetMapping("/currency/{currencyCode}")
     public GifObject gifByCurrencyState(@PathVariable String currencyCode) throws ExchangeRatesComparatorException {
 
-        try {
-            int comparingResult = currencyComparator.compareWithDefaultCurrency(currencyCode);
-            if (comparingResult >= 0) {
-                return gifFinder.getGifByTag(currencyGrowsKeyword);
-            } else {
-                return gifFinder.getGifByTag(currencyFallsKeyword);
-            }
+        int comparingResult = currencyComparator.compareWithDefaultCurrency(currencyCode);
 
-        } catch (ExchangeRatesComparatorException e) {
-            throw new ExchangeRatesComparatorException("Exception while getting gif by currency state", e);
+        if (comparingResult >= 0) {
+            return gifFinder.getGifByTag(currencyGrows);
+        } else {
+            return gifFinder.getGifByTag(currencyFalls);
         }
     }
 }

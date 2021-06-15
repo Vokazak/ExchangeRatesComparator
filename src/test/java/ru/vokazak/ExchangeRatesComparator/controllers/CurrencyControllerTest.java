@@ -53,8 +53,8 @@ class CurrencyControllerTest {
                 .thenReturn(broke);
 
         currencyController = new CurrencyController(currencyComparator, gifFinder);
-        currencyController.setCurrencyGrowsKeyword("rich");
-        currencyController.setCurrencyFallsKeyword("broke");
+        currencyController.setCurrencyGrows("rich");
+        currencyController.setCurrencyFalls("broke");
     }
 
     @Test
@@ -74,6 +74,5 @@ class CurrencyControllerTest {
                 () -> currencyController.gifByCurrencyState(NON_EXISTENT_CODE)
         );
 
-        assertEquals(exception.getMessage(),"Exception while getting gif by currency state");
     }
 }

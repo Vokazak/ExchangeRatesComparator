@@ -12,6 +12,6 @@ public class ExchangeRatesComparatorAdvice {
     @ExceptionHandler(ExchangeRatesComparatorException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     String employeeNotFoundHandler(ExchangeRatesComparatorException e) {
-        return e.getMessage() + ", cause: " + e.getCause().getMessage();
+        return e.getMessage();
     }
 }
