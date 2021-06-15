@@ -17,14 +17,14 @@ public class CurrencyComparator {
 
     private final CurrencyAnalyzer currencyAnalyzer;
 
-    public int compareWithDefaultCurrency(String currencyCode) throws ExchangeRatesComparatorException {
+    public int compareTodayRatioAndYesterdayRatioOfArgCurrencyAndDefaultCurrency(String currencyCode) throws ExchangeRatesComparatorException {
 
-        BigDecimal oldRatio = currencyAnalyzer.getYesterdayRate(currencyCode)
+        BigDecimal yesterdayRatio = currencyAnalyzer.getYesterdayRate(currencyCode)
                 .divide(currencyAnalyzer.getYesterdayRate(defaultCurrencyCode), MathContext.DECIMAL32);
 
-        BigDecimal newRatio = currencyAnalyzer.getCurrentRate(currencyCode)
+        BigDecimal todayRatio = currencyAnalyzer.getCurrentRate(currencyCode)
                 .divide(currencyAnalyzer.getCurrentRate(defaultCurrencyCode), MathContext.DECIMAL32);
 
-        return newRatio.compareTo(oldRatio);
+        return todayRatio.compareTo(yesterdayRatio);
     }
 }

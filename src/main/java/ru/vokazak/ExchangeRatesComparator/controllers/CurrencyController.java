@@ -27,7 +27,7 @@ public class CurrencyController {
     @GetMapping("/currency/{currencyCode}")
     public GifObject gifByCurrencyState(@PathVariable String currencyCode) throws ExchangeRatesComparatorException {
 
-        int comparingResult = currencyComparator.compareWithDefaultCurrency(currencyCode);
+        int comparingResult = currencyComparator.compareTodayRatioAndYesterdayRatioOfArgCurrencyAndDefaultCurrency(currencyCode);
 
         if (comparingResult >= 0) {
             return gifFinder.getGifByTag(currencyGrows);
