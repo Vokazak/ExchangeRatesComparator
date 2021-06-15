@@ -40,11 +40,11 @@ class CurrencyControllerTest {
         broke = new GifObject();
         broke.setUrl("broke_url");
 
-        when(currencyComparator.compareWithDefaultCurrency(GROWING_CURRENCY_CODE))
+        when(currencyComparator.compareTodayRatioAndYesterdayRatioOfArgCurrencyAndDefaultCurrency(GROWING_CURRENCY_CODE))
                 .thenReturn(1);
-        when(currencyComparator.compareWithDefaultCurrency(FALLING_CURRENCY_CODE))
+        when(currencyComparator.compareTodayRatioAndYesterdayRatioOfArgCurrencyAndDefaultCurrency(FALLING_CURRENCY_CODE))
                 .thenReturn(-1);
-        when(currencyComparator.compareWithDefaultCurrency(NON_EXISTENT_CODE))
+        when(currencyComparator.compareTodayRatioAndYesterdayRatioOfArgCurrencyAndDefaultCurrency(NON_EXISTENT_CODE))
                 .thenThrow(ExchangeRatesComparatorException.class);
 
         when(gifFinder.getGifByTag("rich"))
